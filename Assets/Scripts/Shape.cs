@@ -9,7 +9,7 @@ public class Shape : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        color = this.gameObject.GetComponent<Renderer>().material.color;
+        color = gameObject.GetComponent<Renderer>().material.color;
     }
 
     // Update is called once per frame
