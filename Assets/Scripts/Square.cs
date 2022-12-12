@@ -2,23 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Square : Shape
+public class Square : Shape // INHERITANCE
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected override void PrintText()
+    
+    protected override void PrintText() // POLYMORPHISM
     {
         shapeName = name + " and what is this sphere doing ><";
-        base.PrintText();
+        base.PrintText(); // INHERITANCE
     }
 }

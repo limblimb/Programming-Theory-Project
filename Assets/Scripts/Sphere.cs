@@ -2,29 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sphere : Shape
+public class Sphere : Shape // INHERITANCE
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected override void OnMouseDown()
+    
+    protected override void OnMouseDown() // POLYMORPHISM
     {   
-        base.OnMouseDown();
-        ChangeSquareColor();
+        base.OnMouseDown(); // INHERITANCE
+        ChangeSquareColor(); // ABSTRACTION
     }
 
     private void ChangeSquareColor()
     {
-        color = Random.ColorHSV();
+        color = Random.ColorHSV(); // INHERITANCE
         GameObject.Find("Square").GetComponent<Renderer>().material.color = color;
         
     }

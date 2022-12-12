@@ -5,20 +5,15 @@ using UnityEngine;
 public class Shape : MonoBehaviour
 {
     protected string shapeName;
-    public Color color { get; set; }
+    public Color color { get; set; } // ENCAPSULATION
+
     // Start is called before the first frame update
     void Start()
     {
         color = gameObject.GetComponent<Renderer>().material.color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    protected virtual void PrintText()
+    protected virtual void PrintText() 
     {
         if (shapeName == null)
         {
@@ -29,6 +24,6 @@ public class Shape : MonoBehaviour
 
     protected virtual void OnMouseDown()
     {
-        PrintText();
+        PrintText(); // ABSTRACTION
     }
 }
